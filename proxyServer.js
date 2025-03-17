@@ -3,7 +3,7 @@ function browse() {
     console.log(`URL Entered: ${urlInput}`);
     
     if (urlInput) {
-        const proxyUrl = `https://cors-anywhere.herokuapp.com/${urlInput}`;
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(urlInput)}`;
         console.log(`Proxy URL: ${proxyUrl}`);
         document.getElementById('proxyFrame').src = proxyUrl;
         console.log('Iframe source updated.');
